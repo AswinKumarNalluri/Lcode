@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LCode - The ZIP Code of the Future</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" />
 </head>
 <body>
   <header class="hero">
-    <img src="assets/logo.svg" alt="LCode Logo" class="logo">
-    <h1>The ZIP Code of the Future — Global, Open, Free</h1>
-    <p>LCode is designed to be <strong>the ZIP code of the future</strong> — but global, open, and free for everyone.</p>
-    <div class="cta-buttons">
-      <a href="whitepaper.pdf" class="btn">Download Whitepaper</a>
-      <a href="https://github.com/yourrepo" target="_blank" class="btn secondary">View on GitHub</a>
+    <img src="assets/logo.svg" alt="LCode Logo" class="logo" />
+    <h1>LCode — the ZIP code of the future</h1>
+    <p>Global, open, and free for everyone.</p>
+    <p class="magic">👉 Just 5 digits — same accuracy as a Google Maps pin.</p>
+    <div class="cta">
+      <a href="#verify" class="btn">Get Started</a>
+      <a href="whitepaper.html" class="btn secondary">Read Whitepaper</a>
+      <a href="https://github.com/yourrepo/Lcode" class="btn secondary">GitHub</a>
     </div>
   </header>
 
-  <section class="verify">
-    <h2>Verify an LCode (alpha)</h2>
-    <p>Enter an LCode (must include at least 2 letters and 2 digits in the last block):</p>
-    <input type="text" id="lcodeInput" placeholder="e.g. US-CA-12345">
-    <button onclick="verifyLCode()">Verify</button>
-    <p id="verifyResult"></p>
+  <section class="diagram">
+    <h2>How LCode Works</h2>
+    <img src="assets/diagram.svg" alt="LCode Structure Diagram" />
+    <p>CCC-SSS-XXX-YYYYY structure makes location identification universal.</p>
   </section>
 
-  <section class="use-cases">
-    <h2>Why LCode?</h2>
-    <div class="grid">
-      <div class="card">🌍 <strong>Global Standard</strong><br>Works anywhere, without borders.</div>
-      <div class="card">🚚 <strong>Deliveries</strong><br>Reduce errors with precise location codes.</div>
-      <div class="card">🚖 <strong>Rides</strong><br>Pinpoint pickup spots as easily as sharing 5 digits.</div>
-      <div class="card">⛑️ <strong>Emergencies</strong><br>Help services reach you faster with universal codes.</div>
-    </div>
+  <section id="verify" class="verify">
+    <h2>Verify an LCode</h2>
+    <input type="text" id="lcodeInput" placeholder="Enter LCode (5 digits)" />
+    <button onclick="verifyLCode()">Check</button>
+    <p id="result"></p>
   </section>
 
   <footer>
-    <p>© 2025 LCode Project — Open Source. MIT + CC BY 4.0 License.</p>
+    <p>This is the <b>only official open-source registry</b> for LCodes. Always verify your code here: getlcode.com</p>
   </footer>
 
   <script src="verify.js"></script>
