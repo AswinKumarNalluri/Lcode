@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LCode - The ZIP Code of the Future</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/favicon.svg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCode – The ZIP Code of the Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f9fafb;
+            color: #111827;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(135deg, #4f46e5, #3b82f6);
+            color: white;
+        }
+        header img {
+            width: 90px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+        h2 {
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin-top: 1rem;
+            background: white;
+            color: #4f46e5;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid #fff;
+        }
+        .button:hover {
+            background: #f3f4f6;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 1.5rem;
+            background: #1f2937;
+            color: #d1d5db;
+        }
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <header class="hero">
-    <img src="assets/logo.svg" alt="LCode Logo" class="logo" />
-    <h1>LCode — the ZIP code of the future</h1>
-    <p>Global, open, and free for everyone.</p>
-    <p class="magic">👉 Just 5 digits — same accuracy as a Google Maps pin.</p>
-    <div class="cta">
-      <a href="#verify" class="btn">Get Started</a>
-      <a href="whitepaper.html" class="btn secondary">Read Whitepaper</a>
-      <a href="https://github.com/yourrepo/Lcode" class="btn secondary">GitHub</a>
+    <header>
+        <img src="assets/logo.svg" alt="LCode Logo">
+        <h1>LCode</h1>
+        <p>The ZIP code of the future — global, open, and free for everyone.</p>
+        <a href="whitepaper.md" class="button">📄 Read the Whitepaper</a>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>📜 What is LCode?</h2>
+            <p>LCode is an <strong>open-source, global code system</strong> that assigns short, easy-to-share alphanumeric codes to every plot, building, or location in the world. 
+            Instead of long GPS coordinates or confusing addresses, one simple code identifies any location — forever.</p>
+        </section>
+
+        <section>
+            <h2>🏗 How It Works</h2>
+            <p>The standard LCode format is:</p>
+            <pre><code>CCC-SSS-XXX-YYYYY</code></pre>
+            <ul>
+                <li><strong>CCC</strong> → Country Code</li>
+                <li><strong>SSS</strong> → State/Province Code</li>
+                <li><strong>XXX</strong> → Local Area Code</li>
+                <li><strong>YYYYY</strong> → Unique property identifier</li>
+            </ul>
+            <p>Example: <code>001-018-323-X5A2J</code> → USA → California → Los Angeles → Exact plot.</p>
+        </section>
+
+        <section>
+            <h2>🚀 Roadmap</h2>
+            <ul>
+                <li>✅ Phase 1 – Build awareness & GitHub repo</li>
+                <li>✅ Phase 2 – Landing page & open-source documentation</li>
+                <li>⬜ Phase 3 – API for developers (deliveries, maps)</li>
+                <li>⬜ Phase 4 – Partner with delivery & mapping companies</li>
+                <li>⬜ Phase 5 – Global adoption push via open standards</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🌟 Contribute</h2>
+            <p>LCode is <strong>community-driven</strong>. Developers, mappers, and innovators can fork our GitHub repo, suggest improvements, and build on top of the system.</p>
+            <p>📂 <a href="https://github.com/AswinKumarNalluri/Lcode">View on GitHub →</a></p>
+        </section>
     </div>
-  </header>
 
-  <section class="diagram">
-    <h2>How LCode Works</h2>
-    <img src="assets/diagram.svg" alt="LCode Structure Diagram" />
-    <p>CCC-SSS-XXX-YYYYY structure makes location identification universal.</p>
-  </section>
-
-  <section id="verify" class="verify">
-    <h2>Verify an LCode</h2>
-    <input type="text" id="lcodeInput" placeholder="Enter LCode (5 digits)" />
-    <button onclick="verifyLCode()">Check</button>
-    <p id="result"></p>
-  </section>
-
-  <footer>
-    <p>This is the <b>only official open-source registry</b> for LCodes. Always verify your code here: getlcode.com</p>
-  </footer>
-
-  <script src="verify.js"></script>
+    <footer>
+        © 2025 LCode – Created by Aswin Kumar Nalluri.  
+        Open-source under <a href="LICENSE">MIT License</a> & <a href="LICENSE-CC.md">CC BY 4.0</a>.
+    </footer>
 </body>
 </html>
