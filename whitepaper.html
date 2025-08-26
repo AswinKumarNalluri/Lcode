@@ -3,119 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LCode – The ZIP Code of the Future</title>
+    <title>LCode Whitepaper</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: #f9fafb;
-            color: #111827;
-            line-height: 1.6;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem 3rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         header {
             text-align: center;
-            padding: 3rem 1rem;
-            background: linear-gradient(135deg, #4f46e5, #3b82f6);
-            color: white;
-        }
-        header img {
-            width: 90px;
-            margin-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #4b5563;
+            margin: 0.5rem 0 0.25rem;
+        }
+        .meta {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-style: italic;
         }
         h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
             margin-top: 2.5rem;
-            font-size: 1.8rem;
-            text-align: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e5e7eb;
         }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            color: #374151;
         }
-        .button {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            margin-top: 1rem;
-            background: white;
+        p, ul {
+            font-size: 1rem;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: '✔  ';
+        }
+        ul li {
+            padding-left: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #111827;
+            font-weight: 600;
+        }
+        a {
             color: #4f46e5;
-            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            border: 2px solid #fff;
         }
-        .button:hover {
-            background: #f3f4f6;
+        a:hover {
+            text-decoration: underline;
         }
-        section {
-            margin-bottom: 3rem;
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #e5e7eb;
+            margin: 2.5rem 0;
         }
-        footer {
-            text-align: center;
+        blockquote {
+            border-left: 4px solid #4f46e5;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #4b5563;
+        }
+        code {
+            background-color: #e5e7eb;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
             font-size: 0.9rem;
-            padding: 1.5rem;
-            background: #1f2937;
-            color: #d1d5db;
         }
-        footer a {
-            color: #93c5fd;
-            text-decoration: none;
+        .credits-list {
+            list-style-type: '⭐ ';
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="assets/logo.svg" alt="LCode Logo">
-        <h1>LCode</h1>
-        <p>The ZIP code of the future — global, open, and free for everyone.</p>
-        <a href="whitepaper.md" class="button">📄 Read the Whitepaper</a>
-    </header>
 
     <div class="container">
-        <section>
-            <h2>📜 What is LCode?</h2>
-            <p>LCode is an <strong>open-source, global code system</strong> that assigns short, easy-to-share alphanumeric codes to every plot, building, or location in the world. 
-            Instead of long GPS coordinates or confusing addresses, one simple code identifies any location — forever.</p>
+        <header>
+            <h1>🌍 LCode Whitepaper</h1>
+            <p class="subtitle">A Global Open-Source Code System for Precise Location Identification</p>
+            <p class="meta">Version 1.0 – Draft</p>
+        </header>
+
+        <section id="introduction">
+            <h2>📖 1. Introduction</h2>
+            <p>Addresses are broken. From rural areas with no defined streets to crowded cities with duplicate street names, the current system often fails to deliver accuracy and simplicity. GPS coordinates exist, but they are long, difficult to remember, and error-prone.</p>
+            <p><strong>LCode</strong> solves this problem with a <strong>short, standardized alphanumeric code</strong> for every plot of land, building, or location in the world — making navigation, deliveries, and emergency services simpler and universal.</p>
         </section>
 
-        <section>
-            <h2>🏗 How It Works</h2>
-            <p>The standard LCode format is:</p>
-            <pre><code>CCC-SSS-XXX-YYYYY</code></pre>
+        <hr>
+
+        <section id="problem">
+            <h2>🚨 2. The Problem</h2>
+            <p>These issues impact <strong>e-commerce</strong>, <strong>emergency services</strong>, <strong>logistics</strong>, and <strong>mapping technologies</strong>.</p>
             <ul>
-                <li><strong>CCC</strong> → Country Code</li>
+                <li><strong>Inconsistent address formats</strong> – Every country uses a different system, making global standardization impossible.</li>
+                <li><strong>Ambiguity</strong> – Duplicate street names, missing house numbers, or informal addresses lead to confusion.</li>
+                <li><strong>Rural & unmarked areas</strong> – Billions of people live in places with no proper address system.</li>
+                <li><strong>Privacy & security issues</strong> – Sharing a full address exposes personal information unnecessarily.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="solution">
+            <h2>💡 3. The LCode Solution</h2>
+            <p>LCode introduces a <strong>10–13 digit code system</strong> that is:</p>
+            <ul>
+                <li>✅ <strong>Unique</strong> – Every plot of land or building gets <strong>one code forever</strong>.</li>
+                <li>✅ <strong>Memorable</strong> – Uses a mix of <strong>letters and numbers</strong> (easier than GPS).</li>
+                <li>✅ <strong>Scalable</strong> – Enough combinations for <strong>hundreds of years</strong>.</li>
+                <li>✅ <strong>Open-source</strong> – Free for anyone to implement.</li>
+            </ul>
+            <h3>Code Format:</h3>
+            <p><code>CCC-SSS-XXX-YYYYY</code></p>
+            <ul>
+                <li><strong>CCC</strong> → Country Code (numeric, like <code>001</code> for USA)</li>
                 <li><strong>SSS</strong> → State/Province Code</li>
-                <li><strong>XXX</strong> → Local Area Code</li>
-                <li><strong>YYYYY</strong> → Unique property identifier</li>
+                <li><strong>XXX</strong> → Area Code (city/region)</li>
+                <li><strong>YYYYY</strong> → Unique property identifier (alphanumeric)</li>
             </ul>
-            <p>Example: <code>001-018-323-X5A2J</code> → USA → California → Los Angeles → Exact plot.</p>
         </section>
 
-        <section>
-            <h2>🚀 Roadmap</h2>
+        <hr>
+
+        <section id="open-source">
+            <h2>🌎 4. Why Open Source?</h2>
+            <p>LCode will <strong>not be owned by a single company</strong>. Like the internet or GPS, it’s meant to be a <strong>global standard</strong>.</p>
             <ul>
-                <li>✅ Phase 1 – Build awareness & GitHub repo</li>
-                <li>✅ Phase 2 – Landing page & open-source documentation</li>
-                <li>⬜ Phase 3 – API for developers (deliveries, maps)</li>
-                <li>⬜ Phase 4 – Partner with delivery & mapping companies</li>
-                <li>⬜ Phase 5 – Global adoption push via open standards</li>
+                <li><strong>MIT License</strong> for all software and code → free to use & contribute.</li>
+                <li><strong>Creative Commons License (CC BY 4.0)</strong> for documents & whitepapers.</li>
+                <li>Public GitHub repository for <strong>transparency & trust</strong>.</li>
             </ul>
         </section>
 
-        <section>
-            <h2>🌟 Contribute</h2>
-            <p>LCode is <strong>community-driven</strong>. Developers, mappers, and innovators can fork our GitHub repo, suggest improvements, and build on top of the system.</p>
-            <p>📂 <a href="https://github.com/AswinKumarNalluri/Lcode">View on GitHub →</a></p>
-        </section>
-    </div>
+        <hr>
 
-    <footer>
-        © 2025 LCode – Created by Aswin Kumar Nalluri.  
-        Open-source under <a href="LICENSE">MIT License</a> & <a href="LICENSE-CC.md">CC BY 4.0</a>.
-    </footer>
+        <section id="use-cases">
+            <h2>📦 5. Use Cases</h2>
+            <ul>
+                <li><strong>Deliveries & e-commerce</strong> – Packages can be shipped using only an LCode.</li>
+                <li><strong>Emergency services</strong> – Paramedics or firefighters can reach exact locations faster.</li>
+                <li><strong>Events & temporary sites</strong> – Assign short-term codes for festivals, disaster relief, etc.</li>
+                <li><strong>Drone & robot deliveries</strong> – Future-proof for automated logistics.</li>
+                <li><strong>Privacy</strong> – Share your LCode instead of your full address.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="scaling">
+            <h2>📈 6. Scaling for 100+ Years</h2>
+            <ul>
+                <li>Each <strong>state</strong> gets <strong>trillions of codes</strong>.</li>
+                <li>System can expand (e.g., add more letters/digits) if needed.</li>
+                <li>Temporary codes can be <strong>recycled</strong> after 5–10 years.</li>
+                <li>Government or private sectors can integrate LCode into <strong>maps, deliveries, and ID systems</strong>.</li>
+            </ul>
+        </section>
+
+        <hr>
+        
+        <section id="technical-notes">
+            <h2>📜 7. Technical Notes</h2>
+            <ul>
+                <li><strong>Checksum validation</strong> – Codes can be verified as valid or fake instantly.</li>
+                <li><strong>Decentralized ledger (future idea)</strong> – Like Bitcoin, but for locations: open, verifiable, tamper-proof.</li>
+                <li><strong>Backward compatibility</strong> – Early codes will always remain valid.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="roadmap">
+            <h2>🚀 8. Roadmap</h2>
+            <ul>
+                <li>✅ <strong>Phase 1</strong> – Build awareness & GitHub repo (DONE)</li>
+                <li>✅ <strong>Phase 2</strong> – Landing page, open-source documentation (IN PROGRESS)</li>
+                <li>⬜ <strong>Phase 3</strong> – Developer API (mapping, delivery integration)</li>
+                <li>⬜ <strong>Phase 4</strong> – Partner with delivery & mapping companies</li>
+                <li>⬜ <strong>Phase 5</strong> – Propose as a <strong>global standard (UN, ISO)</strong></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="credits">
+            <h2>🏆 9. Credits</h2>
+            <ul class="credits-list">
+                <li><strong>Founder:</strong> Aswin Kumar Nalluri</li>
+                <li><strong>Collaborators:</strong> Global open-source community</li>
+                <li><strong>Special thanks:</strong> ChatGPT (for early brainstorming support)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="license">
+            <h2>📜 10. License</h2>
+            <ul>
+                <li>Code: <a href="LICENSE">MIT License</a></li>
+                <li>Whitepaper & Docs: <a href="LICENSE-CC.md">Creative Commons Attribution 4.0</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <blockquote>
+            <p>LCode is designed to be <strong>the ZIP code of the future</strong> — but global, open, and free for everyone.</p>
+        </blockquote>
+    </div>
 </body>
 </html>
